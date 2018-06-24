@@ -24,7 +24,8 @@ def check_registration(number):
 def sms_reply():
 
 	body = request.values.get('From', None)
-
+	
+	# strips the +1 from phone number
 	cleaned_num = int(body[2:])
 	resp = MessagingResponse()
 	
